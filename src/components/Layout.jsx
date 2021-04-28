@@ -1,14 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Container, Navbar, Nav, Button } from "react-bootstrap";
-import "./Layout.scss";
 
 export default function Layout({ children }) {
   return (
     <Container>
       <header className="header">
         <Navbar expand="lg">
-          <Link className="navbar-brand" to="/">
+          <Link className="navbar-brand" href="/">
             🔥 Flamewars 🔥
           </Link>
 
@@ -16,12 +15,14 @@ export default function Layout({ children }) {
 
           <Navbar.Collapse id="navbar">
             <Nav className="ml-auto">
-              <Link className="nav-link mr-3" to="/log-in">
-                Log In
+              <Link className="nav-link mr-3" href="/login">
+                <a>Log In</a>
               </Link>
 
-              <Link to="/sign-in">
-                <Button>Sign In</Button>
+              <Link href="/signin">
+                <a>
+                  <Button>Sign In</Button>
+                </a>
               </Link>
             </Nav>
           </Navbar.Collapse>
