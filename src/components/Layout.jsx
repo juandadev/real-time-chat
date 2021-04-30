@@ -7,16 +7,16 @@ export default function Layout({ children }) {
     <Container>
       <header className="header">
         <Navbar expand="lg">
-          <Link className="navbar-brand" href="/">
-            🔥 Flamewars 🔥
+          <Link href="/">
+            <a className="navbar-brand">🔥 Flamewars 🔥</a>
           </Link>
 
           <Navbar.Toggle aria-controls="navbar" />
 
           <Navbar.Collapse id="navbar">
             <Nav className="ml-auto">
-              <Link className="nav-link mr-3" href="/login">
-                <a>Log In</a>
+              <Link href="/login">
+                <a className="nav-link mr-3">Log In</a>
               </Link>
 
               <Link href="/signin">
