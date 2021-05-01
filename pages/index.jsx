@@ -1,22 +1,11 @@
-import axios from "axios";
 import React, { useEffect, useState, Fragment } from "react";
-import Image from "next/image";
-import {
-  Card,
-  ListGroup,
-  ListGroupItem,
-  Form,
-  Button,
-  Col,
-  Jumbotron,
-  Toast,
-  Modal,
-} from "react-bootstrap";
+import { Form, Button, Col, Jumbotron, Toast, Modal } from "react-bootstrap";
 import { BlockPicker } from "react-color";
 import io from "socket.io-client";
+const ENDPOINT = "https://real-time-chat-juanda.herokuapp.com";
 
 export default function Home() {
-  const socket = io();
+  const socket = io(ENDPOINT);
   const [showModal, setShowModal] = useState(true);
   const [chatBox, setChatBox] = useState("");
   const [localMessages, setLocalMessages] = useState([]);
@@ -130,7 +119,7 @@ export default function Home() {
 
   return (
     <Fragment>
-      {/* <Modal
+      <Modal
         show={showModal}
         onHide={() => setShowModal(false)}
         backdrop="static"
@@ -173,7 +162,7 @@ export default function Home() {
             Enter
           </Button>
         </Modal.Footer>
-      </Modal> */}
+      </Modal>
 
       <section className="chat">
         <h2>Real time chat</h2>
