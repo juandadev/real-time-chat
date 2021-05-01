@@ -130,7 +130,7 @@ export default function Home() {
 
   return (
     <Fragment>
-      <Modal
+      {/* <Modal
         show={showModal}
         onHide={() => setShowModal(false)}
         backdrop="static"
@@ -173,7 +173,7 @@ export default function Home() {
             Enter
           </Button>
         </Modal.Footer>
-      </Modal>
+      </Modal> */}
 
       <section className="chat">
         <h2>Real time chat</h2>
