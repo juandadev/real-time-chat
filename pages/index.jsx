@@ -2,7 +2,7 @@ import React, { useEffect, useState, Fragment } from "react";
 import { Form, Button, Col, Jumbotron, Toast, Modal } from "react-bootstrap";
 import { BlockPicker } from "react-color";
 import io from "socket.io-client";
-const ENDPOINT = "https://real-time-chat-juanda.herokuapp.com";
+// const ENDPOINT = "https://real-time-chat-juanda.herokuapp.com";
 
 export default function Home() {
   const socket = io(ENDPOINT);
