@@ -6,7 +6,7 @@ const next = require("next");
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handler = app.getRequestHandler();
-const port = 443;
+const port = process.env.NODE_ENV || 3000;
 
 app
   .prepare()
